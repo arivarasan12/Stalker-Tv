@@ -1,6 +1,7 @@
 const express = require("express")
 const axios = require('axios');
 const app =express()
+var port =process.env.PORT || 8000;
 
 app.get('/api',async(req,res)=>{
    await axios(
@@ -20,6 +21,6 @@ app.get('/api',async(req,res)=>{
 });
 
 
-app.listen(8000,()=>{
+app.listen(port,()=>{
     console.log(`Server is running at 8000`);
 })
